@@ -1,15 +1,21 @@
 \usepackage{hyperref} %creates pdf outline
+
 \usepackage{times} %font
+
 \usepackage{setspace}
 \onehalfspacing
+
 \setlength{\parindent}{2.5cm}
+
 \hyphenpenalty=100000
+
 \usepackage[explicit]{titlesec}
 \titleformat{\section}
 {\normalfont\bf}{\thesection}{1em}{\MakeUppercase{#1}}
 \renewcommand{\thesection}{\Roman{section}} 
 \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+
 \usepackage{fancyhdr}
 \fancypagestyle{first}{
 	\fancyhf{}
@@ -29,9 +35,11 @@
 	\fancyfoot[C]{--\thepage--}
 }
 \pagestyle{custom}
+
 \newenvironment{quesitos}
 {\begin{quotation}\itshape}
 	{\end{quotation}}
+
 \newenvironment{quesitosresp}
 {\begin{quotation}\itshape\bf``}
 	{"\end{quotation}}
