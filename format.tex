@@ -1,0 +1,37 @@
+\usepackage{hyperref} %creates pdf outline
+\usepackage{times} %font
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{2.5cm}
+\hyphenpenalty=100000
+\usepackage[explicit]{titlesec}
+\titleformat{\section}
+{\normalfont\bf}{\thesection}{1em}{\MakeUppercase{#1}}
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+\usepackage{fancyhdr}
+\fancypagestyle{first}{
+	\fancyhf{}
+	\fancyhead[C]{
+		\singlespacing
+		\includegraphics{brasao.jpg}\\
+		\textbf{SERVIÇO PÚBLICO FEDERAL\\
+		MJ – POLÍCIA FEDERAL\\
+		SUPERINTENDÊNCIA REGIONAL NO ESTADO DO RIO GRANDE DO SUL\\
+		SETOR TÉCNICO-CIENTÍFICO}
+	}
+	\setlength{\headheight}{4.5cm}
+}
+\fancypagestyle{custom}{
+	\fancyhf{}
+	\fancyhead[C]{\pfdoctype\space Nº \pfdocnum/\pfdocyear - SETEC/SR/PF/RS}
+	\fancyfoot[C]{--\thepage--}
+}
+\pagestyle{custom}
+\newenvironment{quesitos}
+{\begin{quotation}\itshape}
+	{\end{quotation}}
+\newenvironment{quesitosresp}
+{\begin{quotation}\itshape\bf``}
+	{"\end{quotation}}

@@ -1,0 +1,27 @@
+\documentclass[hidelinks,brazilian,12pt,a4paper,final]{article}
+\usepackage[a4paper, includeheadfoot, top=1cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{pdfpages} %\includepdf
+\includepdfset{pages=-,frame=true}
+%\includepdf[addtotoc={1,section,2,MyTitle,mylabel1}]{/tmp/Untitled.pdf}
+
+\input{format}
+\input{variables}
+
+\begin{document}
+	\thispagestyle{first}
+
+		
+	\input{preambulo.tex}
+	\input{quesitos.tex}
+	\clearpage
+	\tableofcontents
+	\clearpage
+	\input{historico.tex}
+	\input{exame.tex}
+	\input{respostas.tex}
+	\input{fecho.tex}
+\end{document}
