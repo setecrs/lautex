@@ -1,27 +1,32 @@
 \def \pfdoctype {LAUDO}
-\def \pfdocsubtype {\MakeUppercase{Informática}}
+\def \pfdoctitle {Laudo de Perícia Criminal Federal}
+\def \pfdocsubtitle {Informática}
 \def \pfdocdate {XXX}
 \def \pfdocnum {XXX}
 \def \pfdocyear {2016}
+\def \pfdocsource {SETEC/SR/PF/RS}
+\def \pfdocnamenum {\pfdoctype\space Nº \pfdocnum/\pfdocyear\space - \pfdocsource}
+
 \def \pfipl {XXX}
 \def \pfclient {do Delegado de Polícia Federal \MakeUppercase{XXX}}
 \def \pfexptype {memorando}
 \def \pfexpnum {XXX}
 \def \pfexpdate {XXX}
+
 \def \pfregnum {XXX}
 \def \pfregdate {XXX}
-\def \pfauthor {\MakeUppercase{Átila Leites Romero}}
+
+\def \pfauthor {Átila Leites Romero}
 \def \pfauthorclass {Especial}
 \def \pfauthormatr {10.388}
-\def \pftitle{\pfdoctype\space Nº \pfdocnum/\pfdocyear\space - SETEC/SR/PF/RS}
 
 
 \hypersetup{%
-	pdftitle={\pftitle},
+	pdftitle={\pfdocnamenum},
 	pdfauthor={\pfauthor},
 %	pdfauthortitle={Title of the Author},
 %	pdfcopyright={Copyright (C) 20xx, Copyrightholder},
-	pdfsubject={\pftitle},
+	pdfsubject={\pfdoctitle\space - \pfdocsubtitle},
 %	pdfkeywords={Keyword1, Keyword2},
 %	pdflicenseurl={http://creativecommons.org/licenses/by-nc-nd/3.0/},
 %	pdfcaptionwriter={Scott Pakin},
