@@ -1,6 +1,7 @@
-*.aux
-*.log
-*.out
-*.pdf
-*.gz
-*.toc
+doc.aux
+doc.log
+doc.out
+doc.pdf
+doc.synctex.gz
+doc.toc
+doc_assinado.pdf

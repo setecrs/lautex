@@ -9,6 +9,10 @@
 
 \hyphenpenalty=100000
 
+\DeclareUnicodeCharacter{00AD}{}
+\DeclareUnicodeCharacter{00A0}{}
+
+
 \usepackage[explicit]{titlesec}
 \titleformat{\section}
 {\normalfont\bf}{\thesection}{1em}{\MakeUppercase{#1}}
@@ -45,3 +49,17 @@
 \newenvironment{quesitosresp}
 {\begin{quotation}\itshape\bf``}
 	{"\end{quotation}}
+
+
+\newenvironment{materialenv}
+{\singlespacing\noindent\obeylines\raggedright}
+{\onehalfspacing} 
+
+
+\newcommand{\material}[1]{
+	\noindent\fbox{
+		\parbox{\textwidth}{
+			#1
+		}
+	}
+}
