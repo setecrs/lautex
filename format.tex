@@ -65,3 +65,17 @@
 		}
 	}
 }
+
+\newcommand{\halffig}[2]{%
+	\begin{minipage}{\textwidth/2}% to keep image and caption on one page
+		\includegraphics[width=\textwidth]{#1}
+		\captionof{figure}{#2}%
+	\end{minipage}%
+	}
+	
+\newcommand{\fullfig}[2]{%
+	\begin{minipage}{\textwidth}% to keep image and caption on one page
+		\includegraphics[width=\textwidth]{#1}
+		\captionof{figure}{#2}%
+	\end{minipage}%
+}
