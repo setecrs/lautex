@@ -7,14 +7,13 @@
 \usepackage{verbatim}
 \usepackage{pdfpages} %\includepdf
 \includepdfset{pages=-,frame=true}
-%\includepdf[addtotoc={1,section,2,MyTitle,mylabel}]{Untitled.pdf}
 
 \input{pdfa}
 \input{format}
 \input{variables}
 
 \begin{document}
-	\sloppy
+	\sloppy	%more respect to margin 
 	\thispagestyle{first}
 	\input{preambulo}
 	\input{quesitos}
@@ -25,4 +24,5 @@
 	\input{respostas}
 	\input{conclusao}
 	\input{fecho}
+%	\includepdf[addtotoc={1,section,1,Anexo I,anexoiref}]{Untitled.pdf}
 \end{document}
