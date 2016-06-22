@@ -1,0 +1,17 @@
+\usepackage[space]{grffile} %support space in filenames
+\newcommand{\includegraphicsb}[1]{%
+	\begingroup%
+	\catcode`\_=12%support _ in filenames
+	\includegraphics[width=\linewidth]{#1}%
+	\endgroup}
+
+\usepackage{caption} % to support caption in figures
+%filename, caption, figs/line
+\newcommand{\minifig}[3]{%
+	\fbox{
+		\begin{minipage}{\linewidth/#3-3\fboxsep-2\fboxrule}% to keep image and caption on one page
+			\includegraphicsb{#1}%
+			\captionof{figure}{\detokenize{#2}}%
+		\end{minipage}%
+	}%
+}

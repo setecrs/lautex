@@ -1,0 +1,53 @@
+\documentclass[hidelinks,brazilian,12pt,a4paper,final]{article}
+\input{preamble/language}
+\usepackage[a4paper, includeheadfoot, top=1cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\usepackage{times} %font
+\usepackage{indentfirst}
+\usepackage{setspace}
+\onehalfspacing
+
+
+\setlength{\parindent}{2.5cm}
+
+%avoid hyphens
+\hyphenpenalty=100000
+
+%fix some copy-paste troubles
+\DeclareUnicodeCharacter{00AD}{}
+\DeclareUnicodeCharacter{00A0}{}
+
+%use roman numbers in section
+\usepackage[explicit]{titlesec}
+\titleformat{\section}
+{\normalfont\bf}{\thesection}{1em}{\MakeUppercase{#1}}
+\renewcommand{\thesection}{\Roman{section}} 
+%\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+%\renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+
+%use dot lines in toc
+\usepackage{titletoc}
+\dottedcontents{section}[1.5em]{\bfseries}{1.3em}{.6em}
+
+%first page header
+\usepackage{fancyhdr}
+\fancypagestyle{first}{
+	\fancyhf{}
+	\fancyhead[C]{
+		\singlespacing
+		\includegraphics{images/brasao.jpg}\\
+		\textbf{SERVIÇO PÚBLICO FEDERAL\\
+			MJ – POLÍCIA FEDERAL\\
+			SUPERINTENDÊNCIA REGIONAL NO ESTADO DO RIO GRANDE DO SUL\\
+			SETOR TÉCNICO-CIENTÍFICO}
+	}
+	\setlength{\headheight}{4.5cm}
+	\renewcommand{\headrulewidth}{0pt}
+}
+%remaining pages header
+\fancypagestyle{custom}{
+	\fancyhf{}
+	\fancyhead[C]{\MakeUppercase{\pfdocnamenum}}
+	\fancyfoot[C]{--\thepage--}
+	\setlength{\headheight}{15pt}
+}
+\pagestyle{custom}
