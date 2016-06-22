@@ -19,8 +19,11 @@
 \titleformat{\section}
 {\normalfont\bf}{\thesection}{1em}{\MakeUppercase{#1}}
 \renewcommand{\thesection}{\Roman{section}} 
-\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
-\renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+%\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+%\renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+
+\usepackage{titletoc}
+\dottedcontents{section}[1.5em]{\bfseries}{1.3em}{.6em}
 
 \usepackage{fancyhdr}
 \fancypagestyle{first}{
@@ -44,13 +47,16 @@
 }
 \pagestyle{custom}
 
+\usepackage{nameref}
+\newcommand*{\fullref}[1]{``\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}'' (pág. \pageref{#1})}
+
 \newenvironment{quesitos}
 {\begin{quotation}\obeylines\itshape}
 	{\end{quotation}}
 
 \newenvironment{quesitosresp}
-{\begin{quotation}\itshape\bf``}
-	{"\end{quotation}}
+{\begin{quotation}\bf\itshape``}
+	{''\end{quotation}}
 
 
 \newenvironment{materialenv}
@@ -66,16 +72,27 @@
 	}
 }
 
+\usepackage[space]{grffile} %support space in filenames
+\newcommand{\PlotFig}[1]{%
+	\begingroup%
+	\catcode`\_=12%support _ in filenames
+	\includegraphics[width=\linewidth]{#1}%
+	\endgroup}
+
+\usepackage{caption}
+\newcommand{\minifig}[3]{%
+\fbox{
+	\begin{minipage}{\linewidth/#3-3\fboxsep-2\fboxrule}% to keep image and caption on one page
+		\PlotFig{#1}%
+		\captionof{figure}{\detokenize{#2}}%
+	\end{minipage}%
+}%
+}
+
 \newcommand{\halffig}[2]{%
-	\begin{minipage}{\textwidth/2}% to keep image and caption on one page
-		\includegraphics[width=\textwidth]{#1}
-		\captionof{figure}{#2}%
-	\end{minipage}%
-	}
-	
+	\minifig{#1}{#2}{2}
+}
+
 \newcommand{\fullfig}[2]{%
-	\begin{minipage}{\textwidth}% to keep image and caption on one page
-		\includegraphics[width=\textwidth]{#1}
-		\captionof{figure}{#2}%
-	\end{minipage}%
+	\minifig{#1}{#2}{1}
 }
