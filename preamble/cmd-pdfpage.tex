@@ -1,0 +1,19 @@
+\usepackage[space]{grffile} %support space in filenames
+\newcommand{\includegraphicsc}[3]{%
+	\begingroup%
+	\catcode`\_=12%support _ in filenames
+	\includegraphics[page=#3,width=#1\linewidth]{#2}%
+	\endgroup}
+
+\usepackage{caption} % to support caption in figures
+%[scale]filename, page, caption
+\newcommand{\pdfpage}[4][1]{%
+	\noindent\begin{minipage}{\linewidth}% to keep image and caption on one page
+		\centering\fbox{
+			\includegraphicsc{#1}{#2}{#3}%
+		}
+		\captionof{figure}{#4 (pág. #3/\the\pdflastximagepages)}%
+	\end{minipage}
+}
+
+

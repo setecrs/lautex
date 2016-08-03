@@ -1,0 +1,19 @@
+\usepackage[space]{grffile} %support space in filenames
+\newcommand{\includegraphicsd}[2]{%
+	\begingroup%
+	\catcode`\_=12%support _ in filenames
+	\includegraphics[width=#1\linewidth]{#2}%
+	\endgroup}
+
+\usepackage{caption} % to support caption in figures
+%[scale]filename, caption
+\newcommand{\minifigb}[3][1]{%
+	\noindent\begin{minipage}{\linewidth}% to keep image and caption on one page
+		\centering\fbox{
+			\includegraphicsd{#1}{#2}%
+		}
+		\captionof{figure}{#3}%
+	\end{minipage}
+}
+
+
