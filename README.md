@@ -1,5 +1,10 @@
-# lautex
-Formato do laudo: PDF/A. 
+# Suggested procedure
+- clone the project
+- open doc.tex in a tex editor (e.g. TexStudio)
+- edit variables.tex
+- include content
+- export it as a PDF/A document
+- sign the pdf using a digital certificate and appropriate tool
 
 License
 =====
