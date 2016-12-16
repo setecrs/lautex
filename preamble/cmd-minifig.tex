@@ -9,8 +9,8 @@
 %filename, caption, figs/line
 \newcommand{\minifig}[3]{%
 	\fbox{
-		\begin{minipage}{\linewidth/#3-3\fboxsep-2\fboxrule}% to keep image and caption on one page
-			\includegraphicsb{#1}%
+		\begin{minipage}[t]{\linewidth/#3-3\fboxsep-2\fboxrule}% to keep image and caption on one page
+			\vspace{0pt}\includegraphicsb{#1}%
 			\captionof{figure}{#2}%
 		\end{minipage}%
 	}%
