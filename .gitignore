@@ -7,3 +7,5 @@ doc.toc
 doc_assinado.pdf
 doc.bbl
 doc.blg
+doc.fdb_latexmk
+doc.fls
