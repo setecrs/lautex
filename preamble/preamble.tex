@@ -5,6 +5,14 @@
 \usepackage{graphicx}
 \usepackage{float} % to support H in {figure}[H]
 \usepackage{verbatim}
+\usepackage{listings}
+\lstset{
+basicstyle=\footnotesize\ttfamily\singlespacing,
+columns=flexible,
+breaklines=true,
+frame=single,
+escapeinside={(@}{@)}
+}
 \usepackage{pdfpages} %command \includepdf
 \includepdfset{pages=-,frame=true} %default: include allpages, with a frame
 
