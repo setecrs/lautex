@@ -1,16 +1,11 @@
 \input{preamble/preamble}
 \input{variables}
 
-\usepackage{background}
-\backgroundsetup{
-  position=current page.east,
-  nodeanchor=east,
-  angle=0,
-  scale=0.88,
-  vshift=0,
-  opacity=1,
-  contents=\includegraphics{images/faixa.png}
-}
+\usepackage{minted}
+
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[pages=1-,angle=0,scale=1.1,xpos=\paperwidth/2-8mm]{\includegraphics{images/faixa.png}}
+
 \begin{document}
 	\sloppy	%more respect to margin 
 	\thispagestyle{first}
