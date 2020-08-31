@@ -7,4 +7,4 @@ RUN dnf install -y \
           texlive-babel-portuges \
           texlive-hyperxmp \
           texlive-xwatermark \
-    && dnf clean
+    && dnf clean all
